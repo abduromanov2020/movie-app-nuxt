@@ -1,75 +1,83 @@
-# Nuxt Minimal Starter
+# GoodMoov - Movie Discovery App
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A modern movie discovery application built with Nuxt 3, TypeScript, and Tailwind CSS. Browse trending movies, search by genre, and discover new films with a sleek, responsive interface.
 
-## Setup
+## Features
 
-Make sure to install dependencies:
+- 🎬 Browse trending and popular movies
+- 🔍 Search movies by genre
+- 🌙 Dark/Light mode support
+- ♾️ Infinite scroll for pagination
+- 🎥 Watch movie trailers
+- 📱 Fully responsive design
 
+## Tech Stack
+
+- **Framework:** Nuxt 3
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **State Management:** Pinia
+- **UI Components:** Headless UI
+- **Icons:** Heroicons
+- **API:** TMDB (The Movie Database)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- pnpm (recommended) or npm
+- TMDB API Key (get it from [TMDB website](https://www.themoviedb.org/documentation/api))
+
+### Installation
+
+1. Clone the repository:
 ```bash
-# npm
-npm install
+git clone https://github.com/yourusername/movie-app-nuxt.git
+cd movie-app-nuxt
+```
 
-# pnpm
+2. Install dependencies:
+```bash
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+3. Create a `.env` file in the root directory:
+```env
+NUXT_PUBLIC_API_BASE_URL=https://api.themoviedb.org/3
+NUXT_PUBLIC_API_KEY=your_tmdb_api_key_here
+```
 
-Start the development server on `http://localhost:3000`:
-
+4. Start the development server:
 ```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Visit `http://localhost:3000` to see the application.
 
-Build the application for production:
+## Project Structure
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+```
+movie-app-nuxt/
+├── components/
+│   ├── common/          # Shared components
+│   ├── movie/           # Movie-related components
+│   ├── genre/           # Genre-related components
+│   └── layout/          # Layout components
+├── composables/         # Vue composables
+├── pages/              # Application pages
+├── stores/             # Pinia stores
+├── types/              # TypeScript types
+├── utils/              # Utility functions
+└── server/             # Server-side code
 ```
 
-Locally preview production build:
+## API Integration
 
-```bash
-# npm
-npm run preview
+The app uses TMDB API for movie data. All API calls are centralized in the `tmdb.ts` utility with proper error handling and type safety.
 
-# pnpm
-pnpm preview
+## Acknowledgments
 
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- [TMDB](https://www.themoviedb.org/) for providing the movie data API
+- [Nuxt.js](https://nuxt.com/) for the amazing framework
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
